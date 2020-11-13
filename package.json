@@ -1,13 +1,15 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "private": true,
+  "private": true,  
+  "homepage": "https://thekiran.github.io/serve/",
   "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "0.9.5",
-    "axios": "^0.20.0",
-    "express": "^4.17.1"
+    "react-scripts": "0.9.5"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,7 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "engines": {
     "node": "14.13.1",
